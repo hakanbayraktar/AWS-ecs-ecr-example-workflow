@@ -5,9 +5,9 @@ This github Action workflow will build and push a new container image to Amazon 
 
 # 1. Create an ECR repository to store your images.
     For example: 
-    ```bash
+ 
     aws ecr create-repository --repository-name my-ecr-repo --region us-east-2
-    ```
+  
     
     Replace the value of the `ECR_REPOSITORY` environment variable in the workflow below with your repository's name.
     Replace the value of the `AWS_REGION` environment variable in the workflow below with your repository's region.
@@ -19,9 +19,9 @@ This github Action workflow will build and push a new container image to Amazon 
     Replace the value of the `ECS_CLUSTER` environment variable in the workflow below with the name you set for the cluster.
 # 3. Store your ECS task definition as a JSON file in your repository.
     The format should follow the output of
-    ```bash
+   
     aws ecs register-task-definition --generate-cli-skeleton
-    ```
+   
     Replace the value of the `ECS_TASK_DEFINITION` environment variable in the workflow below with the path to the JSON file.
     Replace the value of the `CONTAINER_NAME` environment variable in the workflow below with the name of the container
     in the `containerDefinitions` section of the task definition.
